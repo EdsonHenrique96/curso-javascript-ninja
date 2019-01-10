@@ -57,17 +57,17 @@ os livros.
 */
 function book(bookName){
   var books = {
-    Algoritmos: {
+    'Algoritmos': {
       quantidadePaginas: 1200,
       autor: 'Thomas Corman',
       editora: 'MIT Press',
     },
-    LinuxProfissonal: {
+    'Linux Profissonal': {
       quantidadePaginas: 340,
       autor: 'Linus Torvalds',
       editora: 'Gold Book',
     },
-    DockerParaIniciantes: {
+    'Docker Para Iniciantes': {
       quantidadePaginas: 200,
       autor: 'Docker man',
       editora: 'Docker book',
@@ -90,7 +90,7 @@ Ainda com a função acima, imprima a quantidade de páginas de um livro qualque
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-var currentBook = 'DockerParaIniciantes';
+var currentBook = 'Docker Para Iniciantes';
 console.log('O livro ' + currentBook + ' tem ' + book(currentBook).quantidadePaginas + ' páginas!');
 
 /*
