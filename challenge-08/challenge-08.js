@@ -54,39 +54,29 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   "Operação inválida."
 */
 function calculator(operator){
-  switch(operator){
-    case '+':
-      return function(x, y){
-        var calc = x + y;
-        var result = 'Resultado da operação: '+ x +' '+ operator +' '+ y +' = '+ calc +'.'
-        return result;
-      }
-    case '-':
-      return function(x, y){
-        var calc = x - y;
-        var result = 'Resultado da operação: '+ x +' '+ operator +' '+ y +' = '+ calc +'.'
-        return result;
-      }
-    case '*':
-      return function(x, y){
-        var calc = x * y;
-        var result = 'Resultado da operação: '+ x +' '+ operator +' '+ y +' = '+ calc +'.'
-        return result;
-      }
-    case '/':
-      return function(x, y){
-        var calc = x / y;
-        var result = 'Resultado da operação: '+ x +' '+ operator +' '+ y +' = '+ calc +'.'
-        return result;
-      }
-    case '%':
-      return function(x, y){
-        var calc = x % y;
-        var result = 'Resultado da operação: '+ x +' '+ operator +' '+ y +' = '+ calc +'.'
-        return result;
-      }
-    default:
-      return 'Operação inválida';
+  return function (x, y) {
+    var result;
+    switch(operator){
+      case '+':
+        result = x + y;
+        break;
+      case '-':
+        result = x - y;
+        break;
+      case '*':
+        result = x * y;
+        break;
+      case '/':
+        result = x / y;
+        break;
+      case '%':
+        result = x % y;
+        break;
+      default:
+        return 'Operação inválida';
+    }
+
+    return 'Resultado da operação: '+ x +' '+ operator +' '+ y +' = '+ result +'.';
   }
 }
 
